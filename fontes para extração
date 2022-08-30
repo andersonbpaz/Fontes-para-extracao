@@ -1,1 +1,13 @@
+# arquivos de texto com read.csv2
+malhacicloviariarecife <- read.csv2('http://dados.recife.pe.gov.br/dataset/667cb4cf-fc93-4687-bb8f-431550eeb2db/resource/575613ac-9660-4210-989c-eed4255d400c/download/detalhamentocicloviario2022-08.csv', sep = ';', encoding = 'UTF-8')
 
+# arquivos json
+install.packages('rjson')
+library(rjson)
+malhacicloviariarjson <- fromJSON(file= "http://dados.recife.pe.gov.br/dataset/667cb4cf-fc93-4687-bb8f-431550eeb2db/resource/985e58e2-df0b-4d29-a938-983a47e39329/download/metadados-malhacicloviariarecife.json" )
+empresasMetadados <- as.data.frame(malhacicloviariarjson)
+
+# arquivo xml
+install.packages('XML')
+library(XML)
+empenhos_contratos_covid <- xmlToDataFrame("https://dados.sc.gov.br/dataset/4b3d481c-0f57-4443-8e95-a13a49746c0d/resource/6fa5a66b-dba5-462d-904d-5fd4b64493a8/download/empenhos_contratos.xml")
