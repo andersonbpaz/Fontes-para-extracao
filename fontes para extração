@@ -10,4 +10,4 @@ empresasMetadados <- as.data.frame(malhacicloviariarjson)
 # arquivo xml
 install.packages('XML')
 library(XML)
-empenhos_contratos_covid <- xmlToDataFrame("https://dados.sc.gov.br/dataset/4b3d481c-0f57-4443-8e95-a13a49746c0d/resource/6fa5a66b-dba5-462d-904d-5fd4b64493a8/download/empenhos_contratos.xml")
+university_courses_database <- xmlToDataFrame('http://aiweb.cs.washington.edu/research/projects/xmltk/xmldata/data/courses/reed_pv.xml')
